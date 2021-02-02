@@ -30,7 +30,7 @@ int main()
 	int best_position_x = 0;
 	int best_position_sad = 100000;
 	char* Port = const_cast<char*>("COM8");
-	if (!serialcomm.connect(Port)) //COM25¹øÀÇ Æ÷Æ®¸¦ ¿ÀÇÂÇÑ´Ù. ½ÇÆĞÇÒ °æ¿ì -1À» ¹İÈ¯ÇÑ´Ù.
+	if (!serialcomm.connect(Port)) //COM25ë²ˆì˜ í¬íŠ¸ë¥¼ ì˜¤í”ˆí•œë‹¤. ì‹¤íŒ¨í•  ê²½ìš° -1ì„ ë°˜í™˜í•œë‹¤.
 	{
 		cout << "connect faliled" << endl;
 		return -1;
@@ -48,7 +48,7 @@ int main()
 		for (int original_x = 0; original_x < original_w - template_w; original_x++)
 		{
 			int SAD = 0;
-			//ÅÛÇÃ¸´ ÀÌ¹ÌÁö ½ºÄµ
+			//í…œí”Œë¦¿ ì´ë¯¸ì§€ ìŠ¤ìº”
 			for (int template_y = 0; template_y < template_h; template_y++)
 			{
 				uchar *data_template = img_template.data;
@@ -61,7 +61,7 @@ int main()
 					SAD += abs(original_pixel - template_pixel);
 				}
 			}
-			// ÃÖ¼Ò SAD ÁöÁ¡ Ã£±â  
+			// ìµœì†Œ SAD ì§€ì  ì°¾ê¸°  
 			if (best_position_sad > SAD)
 			{
 				best_position_sad = SAD;
