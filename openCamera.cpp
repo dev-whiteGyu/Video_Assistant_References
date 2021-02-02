@@ -17,7 +17,7 @@ int main()
 	VideoCapture cap("output.avi");
 	if (!cap.isOpened())
 	{
-		cerr << "Ä«¸Þ¶ó¸¦ ¿­ ¼ö ¾ø½À´Ï´Ù." << endl;
+		cerr << "ì¹´ë©”ë¼ë¥¼ ì—´ ìˆ˜ ì—†ìŠµë‹ˆë‹¤." << endl;
 		return -1;
 	}
 
@@ -27,7 +27,7 @@ int main()
 		cap.read(frame);
 		if (frame.empty())
 		{
-			cerr << "Ä¸ÃÄ ½ÇÆÐ" << endl;
+			cerr << "ìº¡ì³ ì‹¤íŒ¨" << endl;
 			break;
 		}
 
